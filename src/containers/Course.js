@@ -1,9 +1,10 @@
 import React from 'react'
+import ProjectGroups from './ProjectGroups'
 
 const Course = () => {
     return (
         <div>
-            I am the COURSE
+            <ProjectGroups />
         </div>
     )
 }
