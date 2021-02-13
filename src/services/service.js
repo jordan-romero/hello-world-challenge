@@ -4,3 +4,11 @@ export const getCourse = () => {
     return fetch(url)
         .then(response => response.json())
 }
+
+// trying to find work around for cors: 
+// export const getCourse = () => {
+//     return fetch(url, {
+//         mode: 'no-cors'}
+//         .then(response => response.json())
+//         )
+//     }
