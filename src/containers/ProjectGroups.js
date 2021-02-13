@@ -6,9 +6,11 @@ const ProjectGroups = (props) => {
     const projects = () => {
         return props.group.projects ? props.group.projects.map((project) => {return <Projects key={project.id} project={project}/>}) : null
     }
+
+    console.log(props.group)
     return (
         <div>
-           <ProjectHeader />
+           <ProjectHeader type={props.type} group={props.group}/>
            {projects()}
         </div>
     )

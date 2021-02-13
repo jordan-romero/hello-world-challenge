@@ -1,9 +1,12 @@
 import React from 'react'
 
-const ProjectHeader = () => {
+const ProjectHeader = (props) => {
+    console.log(props.group)
+    
     return (
         <div>
-            I AM A PROJECT HEADER
+            {props.type  === 'independent' ? `${props.type} Complete ${props.group.required} of ${props.group.projects.length}` : props.type}
+            {props.group.title}
         </div>
     )
 }

@@ -12,11 +12,9 @@ const Course = () => {
                 setCourse(data)
         })
     }, [])
-
    const projGroups = () => {
-       return course.project_groups ? course.project_groups.map((group) => {return <ProjectGroups key={group.id} group={group}/>}) : null 
+       return course.project_groups ? course.project_groups.map((group) => {return <ProjectGroups key={group.id} group={group} type={group.type}/>}) : null 
    } 
-
     return (
         <div>
             {projGroups()}
