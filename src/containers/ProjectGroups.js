@@ -4,7 +4,7 @@ import ProjectHeader from '../components/ProjectHeader'
 
 const ProjectGroups = (props) => {
     const projects = () => {
-        return props.group.projects ? props.group.projects.map((projects) => {return <Projects key={projects.id} projects={projects}/>}) : null
+        return props.group.projects ? props.group.projects.map((project) => {return <Projects key={project.id} project={project}/>}) : null
     }
     return (
         <div>

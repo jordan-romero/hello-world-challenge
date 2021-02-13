@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
+    // console.log(props)
     return (
         <div>
-            Hiiiii I am a card 
+             {props.project.title}
         </div>
     )
 }
