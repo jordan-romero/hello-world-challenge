@@ -12,10 +12,15 @@ const Course = () => {
                 setCourse(data)
         })
     }, [])
-    console.log(course)
+    // console.log(course.project_groups)
+
+   const projGroups = () => {
+       return course.project_groups ? course.project_groups.map((group) => {return <ProjectGroups key={group.id} group={group}/>}) : null 
+   } 
+
     return (
         <div>
-            <ProjectGroups />
+            {projGroups()}
         </div>
     )
 }
