@@ -1,7 +1,9 @@
-function App() {
+import Course from './containers/Course'
+
+const App = () => {
   return (
     <div className="App">
-      
+        <Course />
     </div>
   );
 }
