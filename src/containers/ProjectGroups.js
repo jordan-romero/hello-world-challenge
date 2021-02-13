@@ -1,9 +1,10 @@
 import React from 'react'
+import Projects from './Projects'
 
 const ProjectGroups = () => {
     return (
         <div>
-           Hi from Proj Groups 
+           <Projects /> 
         </div>
     )
 }
