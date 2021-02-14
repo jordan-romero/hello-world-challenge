@@ -9,7 +9,7 @@ const ProjectGroups = (props) => {
 
     console.log(props.group)
     return (
-        <div>
+        <div className='cards'>
            <ProjectHeader type={props.type} group={props.group}/>
            {projects()}
         </div>
