@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProjectCard = (props) => {
-    console.log(props)
+    // console.log(props.type)
     return (
         <div className='card'>
             <img className='card__img' src={props.project.image} alt={props.project.title} />
