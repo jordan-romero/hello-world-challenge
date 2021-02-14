@@ -9,10 +9,12 @@ const ProjectGroups = (props) => {
 
     console.log(props.group)
     return (
+        <>
+        <ProjectHeader type={props.type} group={props.group}/>
         <div className='cards'>
-           <ProjectHeader type={props.type} group={props.group}/>
            {projects()}
         </div>
+        </>
     )
 }
 

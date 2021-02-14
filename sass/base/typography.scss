@@ -1,0 +1,20 @@
+.heading-1 {
+    font-family: $IBM; 
+    font-size: 2.4rem; 
+    line-height: 3.2rem;
+    text-transform: capitalize;
+    color: #FFFFFF; 
+    display: inline-block;
+}
+.heading-2 {
+    font-family: $IBM; 
+    font-size: 1.8rem; 
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    color: #FFFFFF; 
+
+    &--blue {
+        color: #66D8E1;
+        margin-left: 2rem;
+    }
+}
