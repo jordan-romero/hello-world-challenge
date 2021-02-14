@@ -41,7 +41,7 @@ const Course = () => {
     }, [])
 
    const projGroups = () => {
-       return course.project_groups ? course.project_groups.map((group) => {return <ProjectGroups key={group.id} group={group} type={group.type}/>}) : null 
+       return course.project_groups ? course.project_groups.map((group) => {return <ProjectGroups key={group.id} group={group} type={group.type} progress={progress}/>}) : null 
    } 
 
    const progressHandler = (option) => {
@@ -61,7 +61,7 @@ const Course = () => {
             })
         }
    }
-   console.log(progress)
+   
     return (
         <div>
             {projGroups()}

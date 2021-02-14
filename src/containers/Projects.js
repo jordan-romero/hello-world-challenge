@@ -4,7 +4,7 @@ import ProjectCard from '../components/ProjectCard'
 const Projects = (props) => {
     
     return (
-        <div>
+        <div className='projects'>
             <ProjectCard project={props.project}/>
         </div>
     )
