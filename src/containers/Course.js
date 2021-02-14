@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ProjectGroups from './ProjectGroups'
 import { getCourse } from '../services/service'
+import Footer from './Footer'
 
 const Course = () => {
 
@@ -18,6 +19,7 @@ const Course = () => {
     return (
         <div>
             {projGroups()}
+            <Footer />
         </div>
     )
 }
