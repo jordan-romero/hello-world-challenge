@@ -7,7 +7,11 @@ const Course = () => {
 
     const [course, setCourse] = useState({})
 
-    const [progress, setProgress] = useState([
+    const [progress, setProgress] = useState({})
+
+    const [counter, setCounter] = useState(1)
+
+    const progressArr = [
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-01.json',
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-02.json',
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-03.json',
@@ -19,14 +23,20 @@ const Course = () => {
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-09.json',
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-10.json',
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-11.json'
-    ])
-
-    const [counter, setCounter] = useState(1)
+    ]
 
     useEffect(() => {
         getCourse()
         .then(data => {
                 setCourse(data)
+        })
+    }, [])
+
+    useEffect(() => {
+        fetch(progressArr[0])
+        .then(response => response.json())
+        .then(data => {
+                setProgress(data)
         })
     }, [])
 
@@ -37,11 +47,21 @@ const Course = () => {
    const progressHandler = (option) => {
         if (option === 'next') {
             setCounter(counter + 1)
+            fetch(progressArr[counter])
+            .then(response => response.json())
+            .then(data => {
+                    setProgress(data)
+            })
         } else {
             setCounter(counter - 1)
+            fetch(progressArr[counter])
+            .then(response => response.json())
+            .then(data => {
+                    setProgress(data)
+            })
         }
    }
-   console.log(counter)
+   console.log(progress)
     return (
         <div>
             {projGroups()}
