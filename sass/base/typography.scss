@@ -1,11 +1,13 @@
 .heading-1 {
     font-family: $IBM; 
+    text-align: left;
     font-size: 2.4rem; 
     line-height: 3.2rem;
     text-transform: capitalize;
     color: #FFFFFF; 
     display: inline-block;
     margin-top: 8rem;
+    margin-left: 2rem; 
 }
 .heading-2 {
     font-family: $IBM; 
@@ -14,6 +16,7 @@
     text-transform: uppercase;
     color: #FFFFFF; 
     padding: 1rem;
+    margin-left: 1rem;
 
     &--blue {
         color: #66D8E1;

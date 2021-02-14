@@ -16,12 +16,14 @@ body {
 
 .heading-1 {
   font-family: "IBM Plex Mono", monospace;
+  text-align: left;
   font-size: 2.4rem;
   line-height: 3.2rem;
   text-transform: capitalize;
   color: #FFFFFF;
   display: inline-block;
-  margin-top: 8rem; }
+  margin-top: 8rem;
+  margin-left: 2rem; }
 
 .heading-2 {
   font-family: "IBM Plex Mono", monospace;
@@ -29,7 +31,8 @@ body {
   line-height: 2.4rem;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-left: 1rem; }
   .heading-2--blue {
     color: #66D8E1;
     margin-left: 2rem; }
@@ -55,3 +58,9 @@ body {
     font-weight: 500;
     line-height: 3.2rem;
     margin: 1.5rem; }
+
+.header {
+  text-align: left; }
+
+.center-content {
+  display: flex; }
