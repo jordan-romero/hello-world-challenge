@@ -7,4 +7,4 @@ Paused at 2hrs to start material UI - will finish functionality tomorrow. 2/13 3
 
 Course - forgot that setting state is async for a sec - threw in a ternary to fix render errors on refresh (Error: blank.map is not a function) <-- I swear this happens to me every time I start a react project so I just wanted to remind myself in the future LOL
 
-Decided to use SASS for styling as I am most comfortable with it and wanted to respect the time limitations. Did experience some issues with the figma css conversions, wondering if there were some settings that were specific to styled components and material UI. 
+<!-- Decided to use SASS for styling as I am most comfortable with it and wanted to respect the time limitations. Did experience some issues with the figma css conversions, wondering if there were some settings that were specific to styled components and material UI.  -->
