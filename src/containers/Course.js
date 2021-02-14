@@ -21,6 +21,8 @@ const Course = () => {
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-11.json'
     ])
 
+    const [counter, setCounter] = useState(1)
+
     useEffect(() => {
         getCourse()
         .then(data => {
@@ -28,14 +30,22 @@ const Course = () => {
         })
     }, [])
 
-    console.log(progress)
    const projGroups = () => {
        return course.project_groups ? course.project_groups.map((group) => {return <ProjectGroups key={group.id} group={group} type={group.type}/>}) : null 
    } 
+
+   const progressHandler = (option) => {
+        if (option === 'next') {
+            setCounter(counter + 1)
+        } else {
+            setCounter(counter - 1)
+        }
+   }
+   console.log(counter)
     return (
         <div>
             {projGroups()}
-            <Footer />
+            <Footer progressHandler={progressHandler}/>
         </div>
     )
 }

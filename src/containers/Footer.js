@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBtn from '../components/NavBtn'
 
-const Footer = () => {
+const Footer = (props) => {
+    console.log(props)
     return (
         <div>
-            <NavBtn />
-            <NavBtn />
+            <button onClick={() => props.progressHandler('back')}>Back</button>
+            <button onClick={() => props.progressHandler('next')}>Next</button>
         </div>
     )
 }
