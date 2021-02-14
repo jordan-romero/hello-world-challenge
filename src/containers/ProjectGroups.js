@@ -4,10 +4,9 @@ import ProjectHeader from '../components/ProjectHeader'
 
 const ProjectGroups = (props) => {
     const projects = () => {
-        return props.group.projects ? props.group.projects.map((project) => {return <Projects key={project.id} project={project}/>}) : null
+        return props.group.projects ? props.group.projects.map((project) => {return <Projects key={project.id} project={project} />}) : null
     }
 
-    console.log(props.group)
     return (
         <div className='center-content'>
             <div>

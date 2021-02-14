@@ -1,8 +1,6 @@
 import React from 'react'
 
 const ProjectHeader = (props) => {
-    console.log(props.group)
-    
     return (
         <div className='header'>
             <h1 className='heading-1'>{props.type} Projects</h1>

@@ -1,9 +1,11 @@
 import React from 'react'
+import NavBtn from '../components/NavBtn'
 
 const Footer = () => {
     return (
         <div>
-            Hi from Footer
+            <NavBtn />
+            <NavBtn />
         </div>
     )
 }
