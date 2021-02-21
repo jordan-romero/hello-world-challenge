@@ -36,6 +36,7 @@ const ProjectCard = (props) => {
                 return <img className='card__btn' src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/complete.svg'} alt={'btn'}/>
         
             default:
+                <img className='card__btn' src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/lock.svg'} alt={'btn'}/>
                 break;
         }
     }
