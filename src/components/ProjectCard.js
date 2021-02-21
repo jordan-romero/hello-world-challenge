@@ -15,8 +15,15 @@ const ProjectCard = (props) => {
             return proj[0] === props.project.id
         })
     })
-
-    console.log(projects)
+    const arr = []
+    projects && projects.map((proj) => {
+        if (proj.length > 0) {
+            arr.push(proj)
+        }
+    })
+    
+    const status = arr.length > 0 && arr[0][0][1]
+    console.log(Object.entries(status)[0][1])
 
     
     return (
