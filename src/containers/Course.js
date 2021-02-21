@@ -67,7 +67,11 @@ const Course = () => {
    
     return (
         <div>
-            {projGroups()}
+            <div className='center-content'>
+                <div>
+                    {projGroups()}
+                </div>
+            </div>
             <Footer progressHandler={progressHandler} counter={counter}/>
         </div>
     )

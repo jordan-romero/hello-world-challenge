@@ -7,23 +7,27 @@ const Footer = (props) => {
     const conditionBtnRender = () => {
         if (props.counter <= 9 && props.counter > 0) {
             return (
-                <div>
+                <div className='footer'>
                     <BackBtn progressHandler={props.progressHandler} />
                     <NextBtn progressHandler={props.progressHandler} />
                 </div>
             )
         } else if (props.counter === 0) {
             return (
-                <NextBtn progressHandler={props.progressHandler} />
+                <div className='footer'>
+                    <NextBtn progressHandler={props.progressHandler} />
+                </div>
             )
         } else {
             return (
-                <BackBtn progressHandler={props.progressHandler} />
+                <div className='footer'>
+                    <BackBtn progressHandler={props.progressHandler} />
+                </div>
             )
         }
     }
     return (
-        <div className='footer'>
+        <div>
             {conditionBtnRender()}
         </div>
     )
