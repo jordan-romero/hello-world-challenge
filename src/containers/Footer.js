@@ -1,4 +1,5 @@
 import React from 'react'
+import BackBtn from '../components/BackBtn'
 
 const Footer = (props) => {
 
@@ -6,10 +7,7 @@ const Footer = (props) => {
         if (props.counter <= 9 && props.counter > 0) {
             return (
                 <div>
-                    <button onClick={() => props.progressHandler('back')}>
-                    <img src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/back.svg'} />
-                        Back
-                    </button>
+                    <BackBtn progressHandler={props.progressHandler} />
                     <button onClick={() => props.progressHandler('next')}>
                         Next
                         <img src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/next.svg'} />
@@ -25,10 +23,7 @@ const Footer = (props) => {
             )
         } else {
             return (
-            <button onClick={() => props.progressHandler('back')}>
-                    <img src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/back.svg'} />
-                    Back
-            </button>
+                <BackBtn progressHandler={props.progressHandler} />
             )
         }
     }
