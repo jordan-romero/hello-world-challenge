@@ -22,15 +22,30 @@ const ProjectCard = (props) => {
         }
     })
     
-    const status = arr.length > 0 && arr[0][0][1]
-    console.log(Object.entries(status)[0][1])
+    const statusObj = arr.length > 0 && arr[0][0][1]
+    const status = statusObj && Object.entries(statusObj)[0][1]
+
+    console.log(status)
+    const renderButton = () => {
+        switch (status) {
+            case "not_started":
+                return <img className='card__btn' src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/lock.svg'} alt={'btn'}/>
+            case "in_progress":
+                return <img className='card__btn' src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/play.svg'} alt={'btn'}/>
+            case "completed":
+                return <img className='card__btn' src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/complete.svg'} alt={'btn'}/>
+        
+            default:
+                break;
+        }
+    }
 
     
     return (
         <div className='card'>
             <img className='card__img' src={props.project.image} alt={props.project.title} />
             <h3 className='card__title'>{props.project.title}</h3>
-            <img className='card__btn' src={'https://storage.googleapis.com/hw-challenge-assets/course-level-view/icons/complete.svg'} alt={'btn'}/>
+            {renderButton()}
         </div>   
     )
 }
