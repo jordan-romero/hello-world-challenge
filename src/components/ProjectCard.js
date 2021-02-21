@@ -25,7 +25,7 @@ const ProjectCard = (props) => {
     const statusObj = arr.length > 0 && arr[0][0][1]
     const status = statusObj && Object.entries(statusObj)[0][1]
 
-    console.log(status)
+    // console.log(status)
     const renderButton = () => {
         switch (status) {
             case "not_started":

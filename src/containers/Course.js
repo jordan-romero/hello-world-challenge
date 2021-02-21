@@ -9,7 +9,7 @@ const Course = () => {
 
     const [progress, setProgress] = useState({})
 
-    const [counter, setCounter] = useState(1)
+    const [counter, setCounter] = useState(0)
 
     const progressArr = [
         'https://storage.googleapis.com/hw-challenge-assets/course-level-view/progress/course-progress-01.json',
@@ -45,22 +45,25 @@ const Course = () => {
    } 
 
    const progressHandler = (option) => {
-        if (option === 'next') {
+        if (option === 'next' && counter <= 9) {
             setCounter(counter + 1)
             fetch(progressArr[counter])
             .then(response => response.json())
             .then(data => {
                     setProgress(data)
             })
-        } else {
+        } else if (option === 'back' && counter > 0) {
             setCounter(counter - 1)
             fetch(progressArr[counter])
             .then(response => response.json())
             .then(data => {
                     setProgress(data)
             })
+        } else {
+            alert('outside of range')
         }
    }
+   console.log(counter)
    
     return (
         <div>

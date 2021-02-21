@@ -67,3 +67,7 @@ body {
 
 .center-content {
   display: flex; }
+
+.footer {
+  position: fixed;
+  bottom: 0; }
