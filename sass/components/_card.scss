@@ -5,14 +5,15 @@
 .card {
    width: 26.4rem; 
    height: 34rem; 
-   box-shadow: (0px 0px 32px rgba(0, 0, 0, 0.20));
+   box-shadow: (0px 0px 32px rgba(0, 0, 0, 0.70));
    border-radius: 4px;
    margin: 2rem;
+   background-color: #242424;
    
 
    &__img {
         height: 19.2rem;
-        width: 26rem; 
+        width: 26.0rem; 
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
    }

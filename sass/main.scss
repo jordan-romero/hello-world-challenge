@@ -4,7 +4,9 @@
 @import 'base/base'; 
 @import 'base/typography.scss';
 
+@import 'components/button';
 @import 'components/card';
+@import 'components/footer';
 @import 'components/header';
 
 
@@ -14,9 +16,3 @@
     align-items: center;
 }
 
-.footer {
-    position: fixed; 
-    bottom: 0; 
-    background-color: white;
-    width: 100%; 
-}
